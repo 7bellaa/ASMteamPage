@@ -35,6 +35,13 @@
       .section-title{font-size:23px;}
     }
     /* ===== component styles (태스크별로 이 위에 추가) ===== */
+    .hero{padding-top:90px; padding-bottom:80px;}
+    .hero-eyebrow{font-size:13px; font-weight:700; letter-spacing:1px; color:var(--tag-ink);}
+    .hero-title{font-size:46px; font-weight:900; line-height:1.15; margin:14px 0 0; letter-spacing:-.5px;}
+    .hero-slogan{font-size:17px; color:var(--muted); margin:18px 0 0; max-width:620px;}
+    .hero-chips{display:flex; gap:10px; flex-wrap:wrap; margin-top:26px;}
+    .chip{font-size:13px; font-weight:600; background:var(--soft); border:1px solid var(--line); padding:7px 14px; border-radius:999px;}
+    @media(max-width:720px){ .hero-title{font-size:32px;} .hero-slogan{font-size:15px;} }
   </style>
 </head>
 <body>
@@ -51,6 +58,18 @@
 
   <main>
     <!-- 섹션은 이 main 안, </main> 바로 앞에 순서대로 추가 -->
+    <section id="home" class="hero">
+      <div class="container">
+        <div class="hero-eyebrow">(주)대웅찬넷 · DAEUNGCHANNET INC.</div>
+        <h1 class="hero-title">IT 서비스를 만드는<br>부산대학교 학생 창업팀</h1>
+        <p class="hero-slogan">함께 오랜 시간을 보낸 친구들이 모여, 빠르게 움직이고 끝까지 완주합니다.</p>
+        <div class="hero-chips">
+          <span class="chip">IT · Software</span>
+          <span class="chip">Student Startup</span>
+          <span class="chip">Problem Solving</span>
+        </div>
+      </div>
+    </section>
   </main>
 
   <footer id="footer" class="footer">
