@@ -129,7 +129,6 @@
     .idea-main{margin-top:36px;}
     .idea-tag{font-family:var(--font-display); font-size:23px; font-weight:600; color:var(--ink); margin-bottom:16px; letter-spacing:-.01em;}
     .idea-tag .num{color:var(--accent);}
-    .idea-tag.muted{color:var(--muted2);}
     .problem-box{background:var(--surface); border:1px solid var(--line); border-radius:var(--radius); padding:28px;}
     .ps-label{font-size:12px; font-weight:600; letter-spacing:.18em; color:var(--muted2); text-transform:uppercase;}
     .ps-label.sol{color:var(--accent-on-dark);}
@@ -146,14 +145,6 @@
     .sol-desc{font-size:15.5px; color:#cdbfae; margin:12px 0 0;}
     .feat-tags{display:flex; gap:10px; flex-wrap:wrap; margin-top:22px;}
     .feat{font-size:14px; font-weight:500; background:var(--dark-soft); border:1px solid hsl(22 25% 40% / .5); color:#ecd9c6; padding:8px 15px; border-radius:var(--radius);}
-    .idea-sub{margin-top:34px; background:var(--surface); border:1px solid var(--line); border-radius:var(--radius); padding:28px;}
-    .sub-title{font-size:21px; font-weight:600; margin:0; letter-spacing:-.01em;}
-    .sub-desc{font-size:15.5px; color:var(--muted); margin:8px 0 0;}
-    .sub-cols{display:flex; gap:18px; margin-top:20px; flex-wrap:wrap;}
-    .sub-col{flex:1; min-width:230px;}
-    .sub-col.soft{background:var(--soft); border-radius:var(--radius); padding:18px;}
-    .sub-col.soft .ps-label.sol{color:var(--accent-deep);}
-    .sub-sol{font-size:14.5px; color:var(--ink); margin:10px 0 0; line-height:1.7;}
 
     /* 푸터 */
     .footer{border-top:1px solid var(--line); padding:64px 0; margin-top:24px; text-align:center;}
@@ -266,50 +257,29 @@
       <div class="container">
         <div class="section-label">Ideas</div>
         <h2 class="section-title">우리가 풀고 싶은 문제</h2>
-        <p class="section-lead">지금 가장 무게를 두고 있는 두 가지 아이디어입니다.</p>
+        <p class="section-lead">지금 가장 무게를 두고 있는 아이디어입니다.</p>
 
         <div class="idea-main">
-          <div class="idea-tag"><span class="num">아이디어 ①</span> · AI 내장 캘린더</div>
+          <div class="idea-tag"><span class="num">메인 아이디어</span> · 상태를 아는 데스크탑 메이트</div>
           <div class="problem-box">
             <div class="ps-label">The Problem</div>
-            <h3 class="ps-title">기존 캘린더, 너무 불편하다</h3>
+            <h3 class="ps-title">봉고캣, 같이 켜뒀는데 진짜 상태는 모른다</h3>
             <ul class="prob-list">
-              <li>폰·데탑·맥북·애플워치·아이패드 — 기기 간 동기화가 제각각</li>
-              <li>일정 하나 등록하는 데 날짜·시간·태그·위치·반복·알림… 입력이 너무 많음</li>
-              <li>기간에 걸친 일정이나 중간에 끊기는 일정은 여러 번 등록해야 함</li>
+              <li>시험기간, 각자 집에서 공부하면 자꾸 딴짓하고 외로워서 — 봉고캣 로비를 같이 켜둔다</li>
+              <li>분명 공부 중인데 키보드·마우스 입력이 없으면 고양이가 자꾸 잠들어버린다</li>
+              <li>친구가 맹렬히 타이핑하길래 공부하는 줄 알았는데 — 사실 롤을 하는 중이었다</li>
             </ul>
           </div>
-          <div class="bridge">구글 캘린더 + AI 에이전트 조합이면 가능은 하지만, <strong>일반 사용자에게는 그 세팅 자체가 진입장벽</strong>입니다. 그래서 AI를 처음부터 내장한 캘린더를 만듭니다.</div>
+          <div class="bridge">봉고캣은 입력의 <strong>'양'</strong>만 봅니다. 정작 무엇을 하는지는 모르죠. <strong>디스코드가 게임 활동을 자동으로 감지해 보여주듯</strong>, 컴퓨터의 실제 사용 상태를 읽으면 됩니다.</div>
           <div class="solution-box">
             <div class="ps-label sol">Our Solution</div>
-            <h3 class="sol-title">자연어 딸깍, 스크린샷 딸깍 — AI가 알아서 잡아주는 캘린더</h3>
-            <p class="sol-desc">"내일 3시에 회의" 한 줄, 혹은 포스터 스크린샷 한 장이면 AI 에이전트가 일정을 알아서 등록·정리합니다.</p>
+            <h3 class="sol-title">내 '진짜' 상태에 맞춰 움직이는 데스크탑 캐릭터</h3>
+            <p class="sol-desc">실행 중인 앱과 활동을 추적해 — 지금 공부 중인지, 게임 중인지, 자리를 비웠는지에 딱 맞는 애니메이션을 재생합니다. 친구들과 로비를 만들면 서로의 진짜 상태가 한눈에. 같이 있어도 외롭지 않게.</p>
             <div class="feat-tags">
-              <span class="feat">자연어 입력</span>
-              <span class="feat">스크린샷 입력</span>
-              <span class="feat">캘린더 + 할 일 통합</span>
-              <span class="feat">멀티 디바이스 동기화</span>
-              <span class="feat">멀티데이·비연속 일정 지원</span>
-            </div>
-          </div>
-        </div>
-
-        <div class="idea-sub">
-          <div class="idea-tag muted">아이디어 ② · 화면 분할 프리셋</div>
-          <h3 class="sub-title">단축키 한 번에 '작업 모드'가 펼쳐지는 윈도우 매니저</h3>
-          <p class="sub-desc">매번 창 위치를 잡는 그 30초를, 단축키 한 번으로.</p>
-          <div class="sub-cols">
-            <div class="sub-col">
-              <div class="ps-label">Problem</div>
-              <ul class="prob-list">
-                <li>작업 시작마다 같은 창 배치를 반복</li>
-                <li>패턴인데도 매번 수작업</li>
-                <li>기존 매니저는 '배치'만, '앱 실행+배치'는 약함</li>
-              </ul>
-            </div>
-            <div class="sub-col soft">
-              <div class="ps-label sol">Solution</div>
-              <p class="sub-sol">프리셋 + 단축키 = 한 방에 세팅<br>· <strong>CP 프리셋</strong>: Codeforces + VS Code<br>· <strong>메이플 프리셋</strong>: 메인 게임 + 서브 모니터 유튜브</p>
+              <span class="feat">활동 상태 자동 감지</span>
+              <span class="feat">상태별 캐릭터 애니메이션</span>
+              <span class="feat">친구 로비 · 함께 공부</span>
+              <span class="feat">생성형 AI 애니메이션 자동 생성 (확장)</span>
             </div>
           </div>
         </div>
